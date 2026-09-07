@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <title>NovaCart | Discover Amazing Products</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🛍️</span>
+        <span>NovaCart</span>
+      </a>
+
+
+      <!-- Navigation -->
+      <nav class="nav-links">
+
+        <a href="index.html" class="active">Home</a>
+
+        <a href="#products">Products</a>
+         <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+    🌙
+  </button>
+
+        <a href="cart.html" class="cart-link">
+          <span>🛒</span>
+          Cart
+
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <span class="hero-tag">
+          ✨ New Collection Available
+        </span>
+
+        <h1>
+          Discover Products You'll
+          <span>Love.</span>
+        </h1>
+
+        <p>
+          Explore amazing products, discover new favorites,
+          and shop everything you need in one place.
+        </p>
+
+        <a href="#products" class="hero-btn">
+          Shop Now →
+        </a>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <div class="hero-circle"></div>
+
+        <div class="hero-emoji">
+          🛍️
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PRODUCTS ================= -->
+
+  <main class="container" id="products">
+
+    <!-- Page Header -->
+
+    <div class="page-hero">
+
+      <div>
+
+        <span class="eyebrow">
+          OUR COLLECTION
+        </span>
+
+        <h1>Explore Products</h1>
+
+        <p id="resultCount">
+          Loading products...
+        </p>
+
+      </div>
+
+
+      <!-- Search -->
+
+      <div class="search-box">
+
+        <span class="search-icon">🔍</span>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search products..."
+        />
+
+      </div>
+
+    </div>
+
+
+    <!-- CATEGORY FILTERS -->
+
+  <div class="category-filters">
+
+  <button class="category-btn active" data-category="all">
+    All
+  </button>
+
+  <button class="category-btn" data-category="electronics">
+    Electronics
+  </button>
+
+  <button class="category-btn" data-category="fashion">
+    Fashion
+  </button>
+
+  <button class="category-btn" data-category="accessories">
+    Accessories
+  </button>
+
+</div>
+
+
+    <!-- LOADING -->
+
+    <div class="state-box" id="loadingState">
+
+      <div class="spinner"></div>
+
+      <span>Fetching amazing products...</span>
+
+    </div>
+
+
+    <!-- ERROR -->
+
+    <div class="error-box" id="errorState" hidden></div>
+
+
+    <!-- PRODUCT GRID -->
+
+    <div class="product-grid" id="productGrid">
+
+      <!-- Products will be added using JavaScript -->
+
+    </div>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <div>
+
+        <h2>🛍️ ShopEase</h2>
+
+        <p>
+          Your favorite place to discover amazing products.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <p>
+          © 2026 ShopEase. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="storage.js"></script>
+<script src="theme.js"></script>
+  <script src="listing.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>NovaCart | Your Cart</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🛍️</span>
+        <span>NovaCart</span>
+      </a>
+
+
+      <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="index.html#products">Products</a>
+         <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+    🌙
+  </button>
+
+        <a href="cart.html" class="cart-link active">
+          🛒 Cart
+
+          <span class="cart-badge" id="cartBadge">
+            0
+          </span>
+
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+
+  <main class="container">
+
+
+    <!-- PAGE HEADER -->
+
+    <div class="page-hero">
+
+      <div>
+
+        <span class="eyebrow">
+          SHOPPING BAG
+        </span>
+
+        <h1>Your Cart</h1>
+
+        <p class="cart-subtitle">
+          Review your items before checkout.
+        </p>
+
+      </div>
+
+
+      <!-- CONTINUE SHOPPING -->
+
+      <a href="index.html#products" class="continue-shopping">
+        ← Continue Shopping
+      </a>
+
+    </div>
+
+
+    <!-- ================= EMPTY CART ================= -->
+
+    <div
+      class="empty-state"
+      id="emptyState"
+      hidden
+    >
+
+      <div class="emoji">
+        🛒
+      </div>
+
+      <h2>Your cart is empty</h2>
+
+      <p>
+        Looks like you haven't added anything yet.
+      </p>
+
+      <a
+        href="index.html#products"
+        class="btn btn-primary"
+      >
+        🛍️ Browse Products
+      </a>
+
+    </div>
+
+
+    <!-- ================= CART CONTENT ================= -->
+
+    <div
+      class="cart-layout"
+      id="cartContent"
+      hidden
+    >
+
+
+      <!-- CART PRODUCTS -->
+
+      <section
+        class="cart-items"
+        id="cartItems"
+      >
+
+        <!-- Products added dynamically -->
+
+      </section>
+
+
+      <!-- ================= BILL SUMMARY ================= -->
+
+      <aside class="bill-summary">
+
+
+        <!-- ITEM COUNT -->
+
+        <p
+          class="item-count-tag"
+          id="itemCount"
+        >
+          0 items
+        </p>
+
+
+        <h3>
+          Order Summary
+        </h3>
+
+
+        <!-- SUBTOTAL -->
+
+        <div class="bill-line">
+
+          <span>Subtotal</span>
+
+          <span id="summarySubtotal">
+            $0.00
+          </span>
+
+        </div>
+
+
+        <!-- DISCOUNT -->
+
+        <div
+          class="bill-line savings"
+          id="savingsRow"
+          hidden
+        >
+
+          <span>Discount Savings 🎉</span>
+
+          <span id="summarySavings">
+            -$0.00
+          </span>
+
+        </div>
+
+
+        <!-- SHIPPING -->
+
+        <div class="bill-line">
+
+          <span>Shipping</span>
+
+          <span id="summaryShipping">
+            $0.00
+          </span>
+
+        </div>
+
+
+        <!-- TAX -->
+
+        <div class="bill-line">
+
+          <span>Tax (5%)</span>
+
+          <span id="summaryTax">
+            $0.00
+          </span>
+
+        </div>
+
+
+        <hr class="bill-divider" />
+
+
+        <!-- TOTAL -->
+
+        <div class="bill-total">
+
+          <span>Total</span>
+
+          <span id="summaryTotal">
+            $0.00
+          </span>
+
+        </div>
+
+
+        <!-- SHIPPING MESSAGE -->
+
+        <p
+          class="shipping-note"
+          id="shippingNote"
+          hidden
+        ></p>
+
+
+        <!-- CHECKOUT -->
+
+        <button
+          type="button"
+          class="btn btn-primary btn-block"
+          id="checkoutBtn"
+        >
+          🔒 Proceed to Checkout
+        </button>
+
+
+        <!-- CLEAR CART -->
+
+        <button
+          type="button"
+          class="clear-cart-btn"
+          id="clearCartBtn"
+        >
+          🗑️ Clear Cart
+        </button>
+
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <div>
+
+        <h2>🛍️ ShopEase</h2>
+
+        <p>
+          Shop smarter. Discover more.
+        </p>
+
+      </div>
+
+
+      <p>
+        © 2026 ShopEase. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="storage.js"></script>
+<script src="theme.js"></script>
+  <script src="cart.js"></script>
+
+</body>
+</html>

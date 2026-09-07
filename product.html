@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NovaCart | Product Details</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🛍️</span>
+        <span>NovaCart</span>
+      </a>
+
+
+      <nav class="nav-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="index.html#products">
+          Products
+        </a>
+         <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+    🌙
+  </button>
+
+        <a href="cart.html" class="cart-link">
+          🛒 Cart
+
+          <span class="cart-badge" id="cartBadge">
+            0
+          </span>
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+
+  <main class="container">
+
+
+    <!-- Back Button -->
+
+    <a href="index.html#products" class="back-link">
+      ← Back to Products
+    </a>
+
+
+    <!-- Loading State -->
+
+    <div class="state-box" id="loadingState">
+
+      <div class="spinner"></div>
+
+      <span>Fetching product details...</span>
+
+    </div>
+
+
+    <!-- Error State -->
+
+    <div
+      class="error-box"
+      id="errorState"
+      hidden
+    ></div>
+
+
+    <!-- PRODUCT DETAIL -->
+
+    <section
+      class="product-detail"
+      id="productDetail"
+      hidden
+    >
+
+
+      <!-- ================= PRODUCT GALLERY ================= -->
+
+      <div class="gallery">
+
+
+        <!-- Main Image -->
+
+        <div class="main-image-wrap">
+
+          <img
+            id="mainImage"
+            src=""
+            alt="Product image"
+          />
+
+        </div>
+
+
+        <!-- Product Thumbnails -->
+
+        <div
+          class="thumb-strip"
+          id="thumbStrip"
+        ></div>
+
+      </div>
+
+
+      <!-- ================= PRODUCT INFORMATION ================= -->
+
+      <div class="product-info">
+
+
+        <!-- Category -->
+
+        <p
+          class="eyebrow"
+          id="breadcrumbCategory"
+        ></p>
+
+
+        <!-- Product Name -->
+
+        <h1 id="productTitle"></h1>
+
+
+        <!-- Brand -->
+
+        <p
+          class="product-brand"
+          id="productBrand"
+        ></p>
+
+
+        <!-- Rating -->
+
+        <div
+          class="rating-pill"
+          id="productRating"
+        ></div>
+
+
+        <!-- PRICE -->
+
+        <div class="price-block">
+
+          <span
+            class="price-now"
+            id="productPrice"
+          ></span>
+
+
+          <span
+            class="price-was"
+            id="productOriginalPrice"
+            hidden
+          ></span>
+
+
+          <span
+            class="discount-pill"
+            id="productDiscountBadge"
+            hidden
+          ></span>
+
+        </div>
+
+
+        <!-- STOCK -->
+
+        <p
+          class="stock-msg"
+          id="productStock"
+        ></p>
+
+
+        <!-- DESCRIPTION -->
+
+        <p
+          class="product-description"
+          id="productDescription"
+        ></p>
+
+
+        <!-- ================= ADD TO CART ================= -->
+
+        <div class="purchase-row">
+
+
+          <!-- Quantity -->
+
+          <div class="qty-stepper">
+
+            <button
+              type="button"
+              id="qtyMinus"
+              aria-label="Decrease quantity"
+            >
+              −
+            </button>
+
+
+            <input
+              type="number"
+              id="qtyInput"
+              value="1"
+              min="1"
+              readonly
+            />
+
+
+            <button
+              type="button"
+              id="qtyPlus"
+              aria-label="Increase quantity"
+            >
+              +
+            </button>
+
+          </div>
+
+
+          <!-- Add Cart Button -->
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="addToCartBtn"
+          >
+            🛒 Add to Cart
+          </button>
+
+        </div>
+
+
+        <!-- ================= PRODUCT DETAILS ================= -->
+
+        <div class="meta-list">
+
+
+          <div class="meta-row">
+
+            <span class="meta-label">
+              SKU
+            </span>
+
+            <span id="productSku"></span>
+
+          </div>
+
+
+          <div class="meta-row">
+
+            <span class="meta-label">
+              🚚 Shipping
+            </span>
+
+            <span id="productShipping">
+              Free Shipping
+            </span>
+
+          </div>
+
+
+          <div class="meta-row">
+
+            <span class="meta-label">
+              🛡️ Warranty
+            </span>
+
+            <span id="productWarranty"></span>
+
+          </div>
+
+
+          <div class="meta-row">
+
+            <span class="meta-label">
+              ↩️ Returns
+            </span>
+
+            <span id="productReturn"></span>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCT BENEFITS ================= -->
+
+    <section class="product-benefits">
+
+      <div class="benefit-card">
+        <span>🚚</span>
+        <div>
+          <h3>Fast Delivery</h3>
+          <p>Quick and reliable shipping.</p>
+        </div>
+      </div>
+
+
+      <div class="benefit-card">
+        <span>🔒</span>
+        <div>
+          <h3>Secure Payment</h3>
+          <p>Your payments are secure.</p>
+        </div>
+      </div>
+
+
+      <div class="benefit-card">
+        <span>↩️</span>
+        <div>
+          <h3>Easy Returns</h3>
+          <p>Simple and hassle-free returns.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+      <div>
+
+        <h2>🛍️ ShopEase</h2>
+
+        <p>
+          Discover products you'll love.
+        </p>
+
+      </div>
+
+
+      <p>
+        © 2026 ShopEase. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="storage.js"></script>
+ <script src="theme.js"></script>
+  <script src="product.js"></script>
+
+</body>
+</html>
